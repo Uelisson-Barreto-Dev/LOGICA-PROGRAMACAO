@@ -1,0 +1,60 @@
+# 🪙 Exercício 01: Conversor de Moedas com Desconto
+
+## 📌 Descrição
+Este programa em Portugol (VisuAlg) solicita ao usuário um valor monetário em Reais (R$) e um percentual de desconto. Em seguida, calcula a conversão para Dólares (US$), aplica o desconto informado e exibe um relatório detalhado na tela.
+
+---
+
+## 🛠️ Conceitos Praticados
+* **Variáveis e Tipos de Dados:** Uso de tipos `real` para operações numéricas decimais.
+* **Entrada e Saída de Dados:** Interação com o usuário via `escreval` e `leia`.
+* **Operações Aritméticas:** Divisão, multiplicação e subtração.
+* **Cálculo de Porcentagem:** Aplicação de taxas percentuais sobre valores convertidos.
+* **Formatação de Saída:** Limitação de casas decimais no VisuAlg usando a sintaxe `:2:2`.
+
+---
+
+## 📐 Lógica Matemática Aplicada
+1. **Conversão de Cotação:** 
+   $$\text{dolarantesdodesconto} = \frac{\text{reais}}{5.25}$$
+
+2. **Cálculo da Porcentagem de Desconto:** 
+   $$\text{dolares} = \frac{\text{dolarantesdodesconto} \times \text{taxadedesconto}}{100}$$
+
+3. **Abatimento do Desconto:** 
+   $$\text{valorfinal} = \text{dolarantesdodesconto} - \text{dolares}$$
+
+---
+
+## 💻 Código Fonte (VisuAlg)
+
+```portugol
+algoritmo "Conversor de Moedas com Desconto"
+
+var
+   reais: real
+   dolares: real
+   dolarantesdodesconto: real
+   taxadedesconto: real
+   valorfinal: real
+
+inicio
+   escreval("Olá, por favor informe quantos reais você tem: ")
+   leia(reais)
+   escreval("Qual o desconto (em porcentagem)?: ")
+   leia(taxadedesconto)
+   
+   // Processamento
+   dolarantesdodesconto <- (reais / 5.25)
+   dolares <- (dolarantesdodesconto * taxadedesconto) / 100
+   valorfinal <- dolarantesdodesconto - dolares
+
+   // Exibição dos resultados
+   escreval("-----------------------------")
+   escreval("VALOR EM REAIS: R$", reais:2:2)
+   escreval("VALOR EM DÓLAR (SEM DESCONTO): U$", dolarantesdodesconto:2:2)
+   escreval("TAXA DE DESCONTO: ", taxadedesconto, "%")
+   escreval("VALOR DO DESCONTO GANHO: U$", dolares:2:2)
+   escreval("VALOR FINAL A PAGAR: U$", valorfinal:2:2)
+
+fimalgoritmo
