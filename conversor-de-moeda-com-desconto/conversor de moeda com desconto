@@ -1,0 +1,28 @@
+algoritmo "Primeiro Programa"
+
+var
+
+  reais: real
+  dolares: real
+  dolarantesdodesconto: real
+  taxadedesconto: real
+  valorfinal: real
+
+inicio
+
+  escreval("Olá , por favor informe quantos reais você tem: ")
+  leia(reais)
+  escreval("Qual o desconto (em porcentagem)? : ")
+  leia(taxadedesconto)
+  dolarantesdodesconto <- (reais / 5.25)
+  dolares <- (dolarantesdodesconto * taxadedesconto) / 100
+  valorfinal <- dolarantesdodesconto - dolares
+
+  escreval("-----------------------------")
+  escreval("VALOR EM REAIS: R$", reais:2:2)
+  escreval("VALOR EM DÓLAR (SEM DESCONTO): U$", dolarantesdodesconto:2:2)
+  escreval("TAXA DE DESCONTO: ", taxadedesconto, "%")
+  escreval("VALOR DO DESCONTO GANHO: U$", dolares:2:2)
+  escreval("VALOR FINAL A PAGAR: U$", valorfinal:2:2)
+
+fimalgoritmo
