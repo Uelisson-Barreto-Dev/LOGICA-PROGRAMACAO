@@ -1,0 +1,44 @@
+# 📅 Exercício 02: Validador de Ano Bissexto
+
+## 📌 Descrição
+Este programa em Portugol (VisuAlg) solicita ao usuário que informe um ano qualquer e verifica se ele atende aos critérios astronômicos para ser classificado como **Ano Bissexto** (ano com 366 dias).
+
+---
+
+## 🛠️ Conceitos Praticados
+* **Tipos de Dados Inteiros:** Manipulação de datas e anos usando o tipo `inteiro`.
+* **Operador de Resto da Divisão (`mod`):** Utilizado para verificar a divisibilidade exata entre números.
+* **Operadores Lógicos (`e`, `ou`, `<>`):** Construção de expressões condicionais compostas para tratar regras e exceções.
+* **Estrutura Condicional Composta (`se / senao`):** Tomada de decisão com base na validação lógica.
+
+---
+
+## 📐 Lógica Aplicada (Regra Astronômica)
+Um ano é considerável **Bissexto** se atender a uma das duas condições:
+1. Ser divisível por `4` **E** NÃO ser divisível por `100`.
+2. **OU** ser divisível por `400` (exceção para anos centenários).
+
+$$\text{Bissexto} = (\text{ano} \pmod 4 = 0 \land \text{ano} \pmod{100} \neq 0) \lor (\text{ano} \pmod{400} = 0)$$
+
+---
+
+## 💻 Código Fonte (VisuAlg)
+
+```portugol
+algoritmo "Ano Bissexto"
+
+var
+   ano: inteiro
+
+inicio
+   escreval("Por favor informe um ano: ")
+   leia(ano)
+   
+   // Teste lógico composto
+   se (ano mod 4 = 0) e (ano mod 100 <> 0) ou (ano mod 400 = 0) entao
+      escreval("Esse ano é bissexto")
+   senao
+      escreval("Esse ano não é bissexto")
+   fimse
+
+fimalgoritmo
