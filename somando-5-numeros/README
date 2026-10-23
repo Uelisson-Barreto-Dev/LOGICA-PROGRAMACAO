@@ -1,0 +1,18 @@
+# Somando 5 Números
+
+## 📌 Descrição
+Algoritmo que solicita cinco números ao usuário, calcula a soma dos valores informados e apresenta o resultado final.
+
+## 🎯 Objetivo
+Aprender a utilizar uma variável acumuladora para armazenar a soma de vários valores durante uma repetição.
+
+## 🧠 Conceitos praticados
+- Entrada e saída de dados
+- Variáveis acumuladoras
+- Contadores
+- Estrutura de repetição `enquanto`
+- Operações aritméticas
+
+## 🛠️ Tecnologia
+- Portugol / Visualg
+
