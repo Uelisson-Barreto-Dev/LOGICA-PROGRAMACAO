@@ -1,0 +1,31 @@
+algoritmo "somando 5 números"
+// Objetivo: Criar um algoritmo que leia cinco números digitados pelo usuário e mostre a soma total.
+var
+    // 'numero' guarda o valor digitado na rodada atual
+    // 'acumulador' armazena a soma progressiva dos números
+    // 'contador' controla quantas vezes o loop já executou
+    numero, acumulador, contador : real
+
+inicio
+
+    // Inicializa as variáveis de controle antes do início do loop
+    contador <- 0
+    acumulador <- 0
+
+    // O loop vai repetir enquanto o contador for de 0 até 4 (totalizando 5 repetições)
+    enquanto (contador < 5) faca
+        // Solicita e faz a leitura do número atual do usuário
+        escreval("Digite un número: ")
+        leia(numero)
+        
+        // Pega o valor que já estava guardado na "caixa" (acumulador) e soma com o novo número
+        acumulador <- numero + acumulador
+        
+        // Soma 1 ao contador para indicar que uma rodada foi concluída e evitar loop infinito
+        contador <- contador + 1
+    fimenquanto
+
+    // Exibe o resultado final na tela após o término de todas as repetições
+    escreval("A soma é : ", acumulador)
+
+fimalgoritmo
