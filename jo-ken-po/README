@@ -1,0 +1,85 @@
+# ✂️ Exercício 03: Jogo Jo-Ken-Po (Pedra, Papel e Tesoura)
+
+## 📌 Descrição
+Este programa em Portugol (VisuAlg) simula o clássico jogo de Jo-Ken-Po entre um usuário e o computador. O sistema apresenta um menu interativo, gera uma jogada aleatória para a máquina, traduz os códigos numéricos em texto legível e aplica as regras lógicas para determinar o vencedor ou o empate.
+
+---
+
+## 🛠️ Conceitos Praticados
+* **Geração de Números Aleatórios:** Uso da função `randi()` combinada com operações aritméticas para sortear jogadas (`1`, `2` ou `3`).
+* **Estrutura de Escolha Múltipla (`escolha / caso`):** Utilizada para converter os valores numéricos em descrições textuais correspondentes (`Pedra`, `Papel`, `Tesoura`).
+* **Estruturas Condicionais Aninhadas (`se / senao`):** Tomada de decisão em camadas para cobrir cenários de empate, vitória do jogador e vitória da máquina.
+* **Operadores Lógicos Compostos (`e`, `ou`):** Validação simultânea de condições para as regras de vitória do jogo.
+
+---
+
+## 📐 Lógica Aplicada
+1. **Sorteio do Computador:** 
+   $$\text{computador} = \text{randi}(3) + 1$$
+
+2. **Regras de Vitória do Jogador:**
+   O jogador vence se:
+   * $(\text{Jogador} = 1 \land \text{Computador} = 3) \lor (\text{Jogador} = 2 \land \text{Computador} = 1) \lor (\text{Jogador} = 3 \land \text{Computador} = 2)$
+
+3. **Critério de Empate:**
+   * $\text{Jogador} = \text{Computador}$
+
+---
+
+## 💻 Código Fonte (VisuAlg)
+
+```portugol
+algoritmo "Jo-Ken-Po"
+
+var
+   jogador, computador: inteiro
+   jog_nome, comp_nome: caractere
+
+inicio
+   escreval("--- JOGO DO JO-KEN-PO ---")
+   escreval("[ 1 ] PEDRA")
+   escreval("[ 2 ] PAPEL")
+   escreval("[ 3 ] TESOURA")
+   escreval("-------------------------")
+   escreva("Sua jogada: ")
+   leia(jogador)
+
+   computador <- randi(3) + 1
+
+   // Traduzindo a escolha do jogador
+   escolha jogador
+      caso 1
+         jog_nome <- "Pedra"
+      caso 2
+         jog_nome <- "Papel"
+      caso 3
+         jog_nome <- "Tesoura"
+   fimescolha
+
+   // Traduzindo a escolha do computador
+   escolha computador
+      caso 1
+         comp_nome <- "Pedra"
+      caso 2
+         comp_nome <- "Papel"
+      caso 3
+         comp_nome <- "Tesoura"
+   fimescolha
+
+   escreval("-------------------------")
+   escreval("Você jogou: ", jog_nome)
+   escreval("O computador jogou: ", comp_nome)
+   escreval("-------------------------")
+   
+   se (jogador = computador) entao
+      escreval("Resultado: EMPATE!")
+   senao
+      se ((jogador = 1) e (computador = 3)) ou ((jogador = 2) e (computador = 1)) ou ((jogador = 3) e (computador = 2)) entao
+         escreval("Resultado: Você VENCEU!")
+      senao
+         escreval("Resultado: O Computador VENCEU!")
+      fimse
+   senao
+   fimse
+
+fimalgoritmo
