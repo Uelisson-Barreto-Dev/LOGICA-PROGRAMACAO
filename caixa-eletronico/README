@@ -1,0 +1,21 @@
+# Caixa Eletrônico
+
+## 📌 Descrição
+Algoritmo que simula um caixa eletrônico simples, permitindo consultar o saldo, realizar saques e encerrar o programa por meio de um menu interativo.
+
+O programa verifica se o saldo é suficiente para realizar um saque e trata valores inválidos e opções incorretas.
+
+## 🎯 Objetivo
+Aplicar os conceitos de lógica de programação em uma simulação que envolve decisões, repetição e atualização de valores.
+
+## 🧠 Conceitos praticados
+- Estrutura de repetição `enquanto`
+- Estruturas condicionais `se/senao`
+- Menus interativos
+- Operadores relacionais
+- Validação de dados
+- Atualização de variáveis
+
+## 🛠️ Tecnologia
+- Portugol / Visualg
+
