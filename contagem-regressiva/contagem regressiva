@@ -1,0 +1,15 @@
+algoritmo "contagem regressiva"
+
+var
+  contador : inteiro
+
+inicio
+// a mesma coisa do contador simples mas a diferença é que ao inves de contador receber o número menor, ele irá receber o número maior que nesse caso é o 10
+  contador <- 10
+  // enquanto o contador (que neste caso é 10) for maior ou igual a 0 ele irá subtrair 1 do contador
+  enquanto (contador >= 0 ) faca
+    escreval(contador)
+    contador <- contador - 1
+  fimenquanto
+
+fimalgoritmo
