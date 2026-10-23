@@ -1,0 +1,18 @@
+# Validação de Senha
+
+## 📌 Descrição
+Algoritmo que solicita uma senha ao usuário e continua pedindo novas tentativas até que a senha correta seja informada.
+
+## 🎯 Objetivo
+Praticar a validação de dados por meio de uma estrutura de repetição.
+
+## 🧠 Conceitos praticados
+- Entrada e saída de dados
+- Estrutura de repetição `enquanto`
+- Operadores de comparação
+- Validação de dados
+- Condições de parada
+
+## 🛠️ Tecnologia
+- Portugol / Visualg
+
