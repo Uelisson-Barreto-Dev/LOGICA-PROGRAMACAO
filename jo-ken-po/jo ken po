@@ -1,0 +1,55 @@
+algoritmo "Jo-Ken-Po"
+
+var
+// Precisamos declarar variaveis para a escolha do jogador, escolha do computador e mais daus variáveis para traduzir o que cada um escolheu
+  jogador, computador: inteiro
+  jog_nome, comp_nome: caractere
+
+inicio
+//Precisamos solicitar que o jogador escolha uma das 3 opções
+  escreval("--- JOGO DO JO-KEN-PO ---")
+  escreval("[ 1 ] PEDRA")
+  escreval("[ 2 ] PAPEL")
+  escreval("[ 3 ] TESOURA")
+  escreval("-------------------------")
+  escreva("Sua jogada: ")
+  leia(jogador)
+// Para o computador escolher aleatoriamente ente os 3 números precisamos usar o "rendi(3) +1" pois se usarmos somente o rendi(3) ele só escolhe de 0 a 2 e como o 0 não é uma escolha lógica nesse programa precisamos adicionar + 1 para ele escolher até o 3
+  computador <- randi(3) + 1
+
+  // Traduzindo a escolha do jogador para aparecer o nome no final e não simplesmente o número isolado
+  escolha jogador
+    caso 1
+      jog_nome <- "Pedra"
+    caso 2
+      jog_nome <- "Papel"
+    caso 3
+      jog_nome <- "Tesoura"
+  fimescolha
+
+  // Traduzindo a escolha do computador para o mesmo objetivo
+  escolha computador
+    caso 1
+      comp_nome <- "Pedra"
+    caso 2
+      comp_nome <- "Papel"
+    caso 3
+      comp_nome <- "Tesoura"
+  fimescolha
+
+  escreval("-------------------------")
+  escreval("Você jogou: ", jog_nome)
+  escreval("O computador jogou: ", comp_nome)
+  escreval("-------------------------")
+
+  se (jogador = computador) entao
+    escreval("Resultado: EMPATE!")
+  senao
+    se ((jogador = 1) e (computador = 3)) ou ((jogador = 2) e (computador = 1)) ou ((jogador = 3) e (computador = 2)) entao
+      escreval("Resultado: Você VENCEU!")
+    senao
+      escreval("Resultado: O Computador VENCEU!")
+    fimse
+  fimse
+
+fimalgoritmo
