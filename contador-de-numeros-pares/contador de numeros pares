@@ -1,0 +1,17 @@
+algoritmo "contador de números pares"
+
+var
+
+  contador: inteiro
+
+inicio
+
+  //Agora precisamos fazer esse contador receber o menor número par, neste caso irei fazer de 0 a 20 (sei que o 0 pode não contar como par pois ele é nulo mas adicionei para ficar mais apresentável)
+  //Equanto esse número for menor ou igual a 20 ele irá adicionar 2 ao contador
+  contador <- 0
+  enquanto (contador <= 20 ) faca
+    escreval(contador)
+  contador <- contador + 2
+  fimenquanto
+
+fimalgoritmo
