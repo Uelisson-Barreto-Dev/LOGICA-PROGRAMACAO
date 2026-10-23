@@ -1,0 +1,57 @@
+algoritmo "Caixa eletrônico"
+var
+  saldo: real      // Armazena o dinheiro disponível na conta do usuário
+  opcao: inteiro   // Armazena a escolha feita pelo usuário no menu
+  saque: real      // Armazena o valor que o usuário deseja retirar
+
+inicio
+  // Define o estado inicial do caixa eletrônico antes de abrir o menu
+  saldo <- 1000
+  opcao <- 0 // Inicializado com 0 para garantir a entrada no loop 'enquanto'
+  
+  // O menu vai se repetir continuamente até que o usuário escolha a opção 3 (Sair)
+  enquanto (opcao <> 3) faca
+    escreval("--- CAIXA ELETRÔNICO ---")
+    escreval("1 - Consultar Saldo")
+    escreval("2 - Sacar Dinheiro")
+    escreval("3 - Sair")
+    escreval("Escolha uma opção: ")
+    leia(opcao) // Captura a opção desejada pelo usuário
+    
+    // Início da estrutura de decisão para tratar a opção escolhida
+    se (opcao = 1) entao
+        // OPÇÃO 1: Apenas exibe o saldo atualizado armazenado na memória
+        escreval("Seu saldo atual é: R$ ", saldo)
+    senao
+        se (opcao = 2) entao
+            // OPÇÃO 2: Solicita o valor do saque e inicia as validações de segurança
+            escreval("Qual valor você deseja sacar? ")
+            leia(saque)
+            
+            // Validação 1: O usuário não pode sacar mais dinheiro do que possui em conta
+            se (saque > saldo) entao
+                escreval("Saldo insuficiente!")
+            senao
+                // Validação 2: O valor do saque não pode ser zero ou negativo
+                se (saque <= 0) entao
+                    escreval("Valor inválido! Digite um valor maior que zero.")
+                senao
+                    // Se passou por todas as validações, o saque é autorizado
+                    saldo <- saldo - saque // Deduz o valor retirado do saldo total
+                    escreval("Saque realizado com sucesso!")
+                fimse
+            fimse
+            
+        senao
+            // OPÇÃO INVÁLIDA: Se o usuário não digitou 1, nem 2, nem 3
+            se (opcao <> 3) entao
+                escreval("Opção inválida! Tente novamente.")
+            fimse
+        fimse
+    fimse
+
+  fimenquanto // Fim do bloco de repetição. Retorna ao início do menu se opcao != 3
+  
+  // Mensagem executada apenas quando o usuário sai do loop (digita 3)
+  escreval("Programa encerrado. Obrigado por utilizar nosso banco!")
+fimalgoritmo
