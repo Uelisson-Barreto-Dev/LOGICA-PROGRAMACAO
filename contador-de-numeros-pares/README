@@ -1,0 +1,17 @@
+# Contador de Números Pares
+
+## 📌 Descrição
+Algoritmo que exibe os números pares de 0 até 20, incrementando o contador de dois em dois.
+
+## 🎯 Objetivo
+Compreender como utilizar incrementos para percorrer uma sequência numérica.
+
+## 🧠 Conceitos praticados
+- Variáveis inteiras
+- Estrutura de repetição `enquanto`
+- Incremento de dois em dois
+- Sequências numéricas
+
+## 🛠️ Tecnologia
+- Portugol / Visualg
+
