@@ -1,0 +1,17 @@
+# Contagem Regressiva
+
+## 📌 Descrição
+Algoritmo que realiza uma contagem regressiva de 10 até 0 e exibe uma mensagem ao finalizar.
+
+## 🎯 Objetivo
+Praticar estruturas de repetição e entender como diminuir o valor de uma variável a cada iteração.
+
+## 🧠 Conceitos praticados
+- Variáveis inteiras
+- Estrutura de repetição `enquanto`
+- Decremento de variáveis
+- Condições de parada
+
+## 🛠️ Tecnologia
+- Portugol / Visualg
+
