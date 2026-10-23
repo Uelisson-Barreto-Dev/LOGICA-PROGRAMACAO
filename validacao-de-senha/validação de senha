@@ -1,0 +1,20 @@
+algoritmo "validação de senha simples"
+//criar um algoritmo que continue pedindo uma senha até o usuário digitar a senha correta
+var
+    senha: inteiro
+
+inicio
+    //Primeiro é preciso solicitar uma senha qualquer ao usuário
+    escreval("Digite a senha de 4 digitos:")
+    leia(senha)
+
+    //Agora precisamos criar o loop que sempre que a senha for diferente de "1234" o acesso será negado.
+    enquanto (senha <> 1234) faca
+        escreval("Acesso negado, tente novamente:")
+        leia(senha)
+    fimenquanto
+
+    // Se o programa saiu do loop acima, significa que a senha ESTÁ correta!
+    escreval("Acesso permitido, bem-vindo!")
+
+fimalgoritmo
